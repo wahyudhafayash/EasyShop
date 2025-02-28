@@ -1,5 +1,5 @@
 import { getCurrentSession, loginUser, registerUser } from "@/actions/auth";
-import SignIn from "@/app/components/auth/SignIn";
+import SignIn from "@/components/auth/SignIn";
 import { redirect } from "next/navigation";
 import React from "react";
 import zod from "zod";
