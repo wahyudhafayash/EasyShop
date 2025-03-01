@@ -28,7 +28,7 @@ const SalesCampaignBanner = () => {
           </div>
 
           <button
-            className="bg-white text-black px-4 py-1 rounded-full font-bold text-sm hover:bg-yellow-100 transition-colors shadow-lg cursor-pointer"
+            className="bg-white text-black px-4 py-1 rounded-full font-bold text-sm hover:bg-gray-200 transition-colors shadow-lg cursor-pointer"
             onClick={() => {
               router.push("/product");
             }}

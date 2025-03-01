@@ -21,9 +21,10 @@ const AnnouncementsBar = () => {
 
 type HeaderProps = {
   user: Omit<User, "PasswordHash"> | null;
+  categorySelector: React.ReactNode;
 };
 
-const Header = ({ user }: HeaderProps) => {
+const Header = ({ user, categorySelector }: HeaderProps) => {
   const router = useRouter();
 
   const [isOpen, setisOpen] = useState<boolean>(true);
@@ -73,8 +74,7 @@ const Header = ({ user }: HeaderProps) => {
               </button>
 
               <nav className="hidden md:flex gap-4 lg:gap-6 text-sm font-medium">
-                <Link href="#">Shop</Link>
-                <Link href="#">New Product</Link>
+                {categorySelector}
                 <Link href="#">Sale</Link>
               </nav>
             </div>
