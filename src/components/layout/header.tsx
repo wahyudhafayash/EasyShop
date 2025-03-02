@@ -6,6 +6,7 @@ import { FiSearch, FiShoppingCart } from "react-icons/fi";
 import { User } from "@prisma/client";
 import { logoutUser } from "@/actions/auth";
 import { useRouter } from "next/navigation";
+import HeaderSearchBar from "./HeaderSearchBar";
 
 const AnnouncementsBar = () => {
   return (
@@ -80,9 +81,7 @@ const Header = ({ user, categorySelector }: HeaderProps) => {
             </div>
 
             <div className="flex flex-1 justify-end items-center gap-2 sm:gap-4">
-              <button className="text-gray-700 hover:text-gray-900 hidden sm:block cursor-pointer">
-                <FiSearch size={25} />
-              </button>
+              <HeaderSearchBar />
 
               {user ? (
                 <div className="flex items-center gap-2 sm:gap-4">
